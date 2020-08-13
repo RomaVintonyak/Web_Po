@@ -1,13 +1,25 @@
-$color: #fcb624;
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+/*block*/
+@import "block/container.scss"; 
 
+/*main style*/
 body{
-  background-color: rgba(#2e8cd8, 0.7);
+  background-color: rgba($blue, 0.7);
   h1{
+
     color: red;
     font-size: 16px;
   }
   span{
-    color: $color;
+    color: $green;
+    @include tablet{
+      font-size: 60px;
+    }
   }
   p{
     font-size: 35px;
@@ -25,6 +37,10 @@ a{
   text-decoration: none;
   color: white;
   font-size: 16px;
+  @media (max-width: $notebook){
+    font-size: 56px;
+    color: aqua;
+  }
 }
 ul{
   li{

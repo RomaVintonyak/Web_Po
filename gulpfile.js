@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var whatcher = require('gulp-watch');
 
 function css_style(done){
   gulp.src('./scss/**/*.scss')
@@ -35,9 +36,6 @@ function browserReload(done){
   browserSync.reload();
   done();
 }
-/*function watchSass(){
-  gulp.watch("./scss/**//*", css_style);*/
-/*}*/
 function watchFiles(){
   gulp.watch("./scss/**/*", css_style);
   gulp.watch("./**/*.html", browserReload);
