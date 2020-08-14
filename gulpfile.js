@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
-var whatcher = require('gulp-watch');
+var minify = require('gulp-minify');
 
 function css_style(done){
   gulp.src('./scss/**/*.scss')
@@ -21,6 +21,19 @@ function css_style(done){
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'))
     .pipe(browserSync.stream());
+  done();
+}
+function js_minify(done){
+  gulp.src('./js_src/**/*.js')
+  .pipe(minify({
+    errorLogToConsole: true,
+    ext: {
+        min: '.min.js'
+    },
+    ignoreFiles: ['-min.js']
+    }))
+    .on('error', console.error.bind(console))
+    .pipe(gulp.dest('./js/'))
   done();
 }
 function Sync(done){
@@ -40,7 +53,8 @@ function watchFiles(){
   gulp.watch("./scss/**/*", css_style);
   gulp.watch("./**/*.html", browserReload);
   gulp.watch("./**/*.php", browserReload);
-  gulp.watch("./**/*.js", browserReload);
+  gulp.watch("./js_src/*.js", js_minify);
+  gulp.watch("./js/**/*.js", browserReload);
 }
 //gulp.task('default', css_style);
 //gulp.task(start);

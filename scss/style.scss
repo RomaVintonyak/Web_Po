@@ -48,3 +48,15 @@ ul{
     height: 10px;
   }
 }
+.title{
+  font-style: italic;
+  font-weight: 700;
+  color: red;
+  font-size: 58px;
+  &:hover{
+    color: orange;
+    font-size: 85px;
+    cursor: pointer;
+    text-shadow:  0 0 15px orange;
+  }
+}
