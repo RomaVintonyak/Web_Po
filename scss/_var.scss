@@ -1,13 +1,15 @@
 /*colors Variable*/
-$green: #01ff23;
-$blue: #3002fc;
+$black: #000000;
+$white: #ffffff;
+$red: #fb5a61;
+$silver-l: #959091;
+$text: #2e2e2e;
 
 
-
-
-/*fonts Variable*/
-
-
+/*google foonts*/
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap');
+$montez: 'Montez', cursive;
+$athiti: 'Athiti', sans-serif;
 
 /*media Variable*/
 $mobile-xxsm: 350px;

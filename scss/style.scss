@@ -5,58 +5,42 @@
 /*mixins*/
 @import "./mixin.scss";
 /*block*/
+/*container*/
 @import "block/container.scss"; 
-
+/*nav*/
+@import "block/nav.scss";
 /*main style*/
+html{
+  font-size: 16px;
+}
 body{
-  background-color: rgba($blue, 0.7);
-  h1{
-
-    color: red;
-    font-size: 16px;
-  }
-  span{
-    color: $green;
-    @include tablet{
-      font-size: 60px;
-    }
-  }
-  p{
-    font-size: 35px;
-    font-weight: 700;
-    color: orchid;
-  }
+  font-family: sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  color: $black;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  overflow-x: hidden;
 }
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
-a{
-  transition:  all 0.5s ease-in-out;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  @media (max-width: $notebook){
-    font-size: 56px;
-    color: aqua;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
-ul{
-  li{
-    width: 100px;
-    height: 10px;
-  }
+p {
+  margin: 0;
 }
-.title{
-  font-style: italic;
-  font-weight: 700;
-  color: red;
-  font-size: 58px;
-  &:hover{
-    color: orange;
-    font-size: 85px;
-    cursor: pointer;
-    text-shadow:  0 0 15px orange;
+a {
+  &:focus {
+    outline: none;
   }
 }
