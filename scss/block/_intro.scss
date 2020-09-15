@@ -58,3 +58,28 @@
     letter-spacing: 5px;
   }
 }
+#introTimer{
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 25%);
+  z-index: 1500;
+  height: 150px;
+  width: 50%;
+  background-image: radial-gradient(circle, #f6f3ed, #e9e9e8,);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.timer__block{
+  width: 20%;
+  text-align: center;
+  p{
+    &:first-child{
+      font-size: 2.2rem;
+    }
+    font-family: $athiti;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $silver-l;
+  }
+}
