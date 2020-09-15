@@ -1,0 +1,36 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.btn{
+  background-color: transparent;
+  border: none;
+  width: 150px;
+  height: 50px;
+  text-transform: uppercase;
+  background-color: $red;
+  color: $white;
+  font-size: 1rem;
+  letter-spacing: 6px;
+  font-weight: 600;
+  font-family: $athiti;
+  transition: color 0.1s linear, border 0.1s linear, background-color 0.1s linear, box-shadow 0.1s linear;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    cursor: pointer;
+    color: $red;
+    background-color: $white;
+    border: 2px solid $red;
+    transition: color 0.1s linear, border 0.1s linear, background-color 0.1s linear, box-shadow 0.1s linear;
+  }
+  &:active{
+    color: $white;
+    background-color: $red;
+    box-shadow: 3px 3px 0px $red;
+  }
+}
