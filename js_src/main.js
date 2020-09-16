@@ -15,57 +15,27 @@ jQuery(document).ready(function () {
     fade: true,
   });
   /*intro timer*/
-    
-
-
-
-
-
-
-
-
-
-
-
-
-  /*var target_date = new Date().getTime() + 1000 * 3600 * 48; // установить дату обратного отсчета
-  var days, hours, minutes, seconds; // переменные для единиц времени
-
-  var countdown = document.getElementById("timerMonth"); // получить элемент тега
-
-  getCountdown();
-
-  setInterval(function () {
-    getCountdown();
+  var deadLine = new Date("2020-11-23").getTime();
+  var timer = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = deadLine - now;
+    // Time calculations for days, hours, minutes and seconds
+    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.5));
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Display the result in the element with id="demo"
+    document.getElementById("timerMonth").innerHTML = month;
+    document.getElementById("timerDays").innerHTML = days;
+    document.getElementById("timerHours").innerHTML = hours;
+    document.getElementById("timerMinutes").innerHTML = minutes;
+    document.getElementById("timerSeconds").innerHTML = seconds;
+    // If the deadLine is finished, write some text
+    if (distance < 0) {
+      clearInterval(timer);
+      var mesag = "just married";
+      alert(mesag);
+    }
   }, 1000);
-
-  function getCountdown() {
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
-
-    days = pad(parseInt(seconds_left / 86400));
-    seconds_left = seconds_left % 86400;
-
-    hours = pad(parseInt(seconds_left / 3600));
-    seconds_left = seconds_left % 3600;
-
-    minutes = pad(parseInt(seconds_left / 60));
-    seconds = pad(parseInt(seconds_left % 60));
-
-    // строка обратного отсчета  + значение тега
-    countdown.innerHTML =
-      "<span>" +
-      days +
-      "</span><span>" +
-      hours +
-      "</span><span>" +
-      minutes +
-      "</span><span>" +
-      seconds +
-      "</span>";
-  }
-
-  function pad(n) {
-    return (n < 10 ? "0" : "") + n;
-  }*/
 });
