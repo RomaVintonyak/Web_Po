@@ -16,6 +16,9 @@
   img{
     border: 1px solid $red;
     border-radius: 5px;
+    &:hover{
+      cursor: grab;
+    }
   }
   h3 {
     margin-top: 1rem;

@@ -16,13 +16,15 @@ jQuery(document).ready(function () {
   });
   /*intro timer*/
   var deadLine = new Date("2020-11-23").getTime();
-  var timer = setInterval(function() {
+  var timer = setInterval(function () {
     var now = new Date().getTime();
     var distance = deadLine - now;
     // Time calculations for days, hours, minutes and seconds
     var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.5));
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     // Display the result in the element with id="demo"
@@ -40,4 +42,12 @@ jQuery(document).ready(function () {
   }, 1000);
   /*fixed header*/
   var headerBar = $("#header");
+  var headerHeight = headerBar.innerHeight();
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() >= 1) {
+      headerBar.addClass("fixed__header");
+    } else {
+      headerBar.removeClass("fixed__header");
+    }
+  });
 });
