@@ -4,8 +4,6 @@
 @import "./help.scss";
 /*mixins*/
 @import "./mixin.scss";
-/*block*/
-@import "block/container.scss"; 
 
 #intro{
   width: 100%;
@@ -84,3 +82,5 @@
     color: $white;
   }
 }
+
+

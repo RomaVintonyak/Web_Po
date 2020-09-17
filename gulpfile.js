@@ -11,7 +11,8 @@ function css_style(done){
     .pipe(sourcemaps.init())
     .pipe(sass({
       errorLogToConsole: true,
-      outputStyle: 'compressed'
+      outputStyle: 'compressed'   //compresed option
+      //outputStyle: 'expanded'   //uncompresed option
     }))
     .on('error', console.error.bind(console))
     .pipe(autoprefixer({

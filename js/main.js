@@ -38,4 +38,6 @@ jQuery(document).ready(function () {
       alert(mesag);
     }
   }, 1000);
+  /*fixed header*/
+  var headerBar = $("#header");
 });
