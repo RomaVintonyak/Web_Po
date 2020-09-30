@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
     var now = new Date().getTime();
     var distance = deadLine - now;
     // Time calculations for days, hours, minutes and seconds
-    var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.5));
+    //var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.5));
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor(
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -28,7 +28,7 @@ jQuery(document).ready(function () {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     // Display the result in the element with id="demo"
-    document.getElementById("timerMonth").innerHTML = month;
+    //document.getElementById("timerMonth").innerHTML = month;
     document.getElementById("timerDays").innerHTML = days;
     document.getElementById("timerHours").innerHTML = hours;
     document.getElementById("timerMinutes").innerHTML = minutes;
@@ -50,4 +50,30 @@ jQuery(document).ready(function () {
       headerBar.removeClass("fixed__header");
     }
   });
+  //rotate img in about us section
+  var cardItem = $(".rotateHover");
+  cardItem.mousemove(srartRotate);
+    function srartRotate(event){
+    //position lelement in page
+    var pos = $(this).offset();
+    var elem_left = pos.left;
+    var elem_top = pos.top;
+    // position cursor in element
+    var Xinner = event.pageX - elem_left;
+    var Yinner = event.pageY - elem_top;
+    // find half width & higth element
+    var halfHeight = cardItem.innerHeight() / 2;
+    var halfWidht = cardItem.innerWidth() / 2;
+    //add css style to element
+    $(this).css({
+      "transform": 'rotateX('+ -(Yinner - halfHeight) / 100 + 'deg) rotateY('+ -(Xinner - halfWidht) / 100 + 'deg)'
+     });
+    }
+     //remove css style
+  cardItem.mouseleave(stopRotate);
+  function stopRotate(event){
+  $(this).css({
+    "transform":"rotate(0deg)",
+  });
+}
 });

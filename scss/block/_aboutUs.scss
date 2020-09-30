@@ -13,6 +13,7 @@
 .about__img {
   flex-basis: 30%;
   text-align: center;
+  perspective: 1000px;
   img{
     border: 1px solid $red;
     border-radius: 5px;
@@ -60,4 +61,7 @@
     font-family: $athiti;
     line-height: 1;
   }
+}
+.rotateHover{
+  transition: transform 0.3s linear;
 }
