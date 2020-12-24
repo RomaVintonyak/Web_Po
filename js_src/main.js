@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
     fade: true,
   });
   /*intro timer*/
-  var deadLine = new Date("2020-11-23").getTime();
+  var deadLine = new Date("2020-12-31").getTime();
   var timer = setInterval(function () {
     var now = new Date().getTime();
     var distance = deadLine - now;

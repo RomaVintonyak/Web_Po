@@ -2,17 +2,19 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var cssbeautify = require('gulp-cssbeautify');
+var removeComments = require('gulp-strip-css-comments');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var minify = require('gulp-minify');
 
 function css_style(done){
+  /* minifi css */
   gulp.src('./scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       errorLogToConsole: true,
-      outputStyle: 'compressed'   //compresed option
-      //outputStyle: 'expanded'   //uncompresed option
+      outputStyle: 'compressed'
     }))
     .on('error', console.error.bind(console))
     .pipe(autoprefixer({
@@ -20,7 +22,21 @@ function css_style(done){
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./css/'))
+    .pipe(gulp.dest('./css/'));
+  done();
+  /* uncompresed css */
+  gulp.src('./scss/**/*.scss')
+    .pipe(sass({
+      errorLogToConsole: true,
+      outputStyle: 'expanded' 
+    }))
+    .on('error', console.error.bind(console))
+    .pipe(autoprefixer({
+      cascade: true
+    }))
+    .pipe(removeComments())
+    .pipe(cssbeautify())
+    .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
   done();
 }

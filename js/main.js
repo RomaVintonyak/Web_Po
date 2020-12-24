@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
     fade: true,
   });
   /*intro timer*/
-  var deadLine = new Date("2020-11-23").getTime();
+  var deadLine = new Date("2020-12-31").getTime();
   var timer = setInterval(function () {
     var now = new Date().getTime();
     var distance = deadLine - now;
@@ -53,7 +53,7 @@ jQuery(document).ready(function () {
   //rotate img in about us section
   var cardItem = $(".rotateHover");
   cardItem.mousemove(srartRotate);
-    function srartRotate(event){
+  function srartRotate(event) {
     //position lelement in page
     var pos = $(this).offset();
     var elem_left = pos.left;
@@ -66,14 +66,19 @@ jQuery(document).ready(function () {
     var halfWidht = cardItem.innerWidth() / 2;
     //add css style to element
     $(this).css({
-      "transform": 'rotateX('+ -(Yinner - halfHeight) / 100 + 'deg) rotateY('+ -(Xinner - halfWidht) / 100 + 'deg)'
-     });
-    }
-     //remove css style
+      transform:
+        "rotateX(" +
+        -(Yinner - halfHeight) / 100 +
+        "deg) rotateY(" +
+        -(Xinner - halfWidht) / 100 +
+        "deg)",
+    });
+  }
+  //remove css style
   cardItem.mouseleave(stopRotate);
-  function stopRotate(event){
-  $(this).css({
-    "transform":"rotate(0deg)",
-  });
-}
+  function stopRotate(event) {
+    $(this).css({
+      transform: "rotate(0deg)",
+    });
+  }
 });
