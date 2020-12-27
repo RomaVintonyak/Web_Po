@@ -1,0 +1,35 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.wedding__event{
+  width: 100%;
+  background-color: #1c1c1c;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.event__row{
+  width: 100%;
+  text-align: center;
+  &--title{
+    h2{
+      font-family: $montez;
+      font-size: 8rem;
+      color: $white;
+      font-weight: normal;
+    }
+  }
+  &--card{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.event__card{
+  background-color: $white;
+  width: 49%;
+}

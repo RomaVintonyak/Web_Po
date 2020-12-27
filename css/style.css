@@ -22,6 +22,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
+
 .img {
     display: block;
     width: 100%;
@@ -844,6 +848,105 @@
     -o-transition: transform 0.3s linear;
     transition: transform 0.3s linear;
     transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text__left {
+    text-align: left;
+}
+
+.text__right {
+    text-align: right;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+@media (max-width: 991px) {
+    .mt-6 {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mt-6 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .mt-4 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+    .mt-2 {
+        margin-top: 1rem;
+    }
+}
+
+.wedding__event {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.event__row {
+    width: 100%;
+    text-align: center;
+}
+
+.event__row--title h2 {
+    font-family: "Montez", cursive;
+    font-size: 8rem;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.event__row--card {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.event__card {
+    background-color: #ffffff;
+    width: 49%;
 }
 
 html {
