@@ -5,31 +5,100 @@
 /*mixins*/
 @import "./mixin.scss";
 
-.wedding__event{
+.wedding__event {
   width: 100%;
   background-color: #1c1c1c;
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-.event__row{
+.event__row {
   width: 100%;
   text-align: center;
-  &--title{
-    h2{
+  &--title {
+    h2 {
       font-family: $montez;
       font-size: 8rem;
       color: $white;
       font-weight: normal;
     }
   }
-  &--card{
+  &--card {
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
 }
-.event__card{
+.event__card {
   background-color: $white;
   width: 49%;
+  transition: box-shadow 0.3s linear, transform 0.3s linear;
+  -webkit-transition: box-shadow 0.3s linear, transform 0.3s linear;
+  -moz-transition: box-shadow 0.3s linear, transform 0.3s linear;
+  -ms-transition: box-shadow 0.3s linear, transform 0.3s linear;
+  -o-transition: box-shadow 0.3s linear, transform 0.3s linear;
+  &:hover{
+    box-shadow: 2px 4px 0 $silver-l;
+    transform: translateY(-6px);
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+}
+  &--title {
+    height: 8rem;
+    width: 100%;
+    background-color: $red;
+    line-height: 8rem;
+    margin-bottom: 2rem;
+    h3 {
+      font-weight: 400;
+      font-size: 3rem;
+      color: $white;
+      font-size: 3rem;
+      font-family: $montez;
+    }
+  }
+  &--suptitle {
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    h4 {
+      font-family: $athiti;
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba($text, 0.9);
+    }
+  }
+  &--img {
+    margin-bottom: 2rem;
+  }
+  &--figure {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    h5 {
+      position: absolute;
+      z-index: 2;
+      font-family: $athiti;
+      font-weight: 700;
+      font-size: 1.5rem;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  &--text {
+    margin-bottom: 4rem;
+    p {
+      line-height: 34px;
+      font-family: $athiti;
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba($text, 0.9);
+    }
+  }
+}
+.right__title--card {
+  background-color: #d2527f;
 }

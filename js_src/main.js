@@ -81,4 +81,18 @@ jQuery(document).ready(function () {
       transform: "rotate(0deg)",
     });
   }
+  /*initialized slick slider to loveline block*/
+  var loveSlider = $("#loveSlider");
+  loveSlider.slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: false,
+    swipe: false,
+    touchMove: false,
+    focusOnSelect: false,
+    fade: false,
+  });
 });

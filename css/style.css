@@ -26,6 +26,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
+
 .img {
     display: block;
     width: 100%;
@@ -947,6 +951,190 @@
 .event__card {
     background-color: #ffffff;
     width: 49%;
+    -webkit-transition: -webkit-box-shadow 0.3s linear, -webkit-transform 0.3s linear;
+    transition: -webkit-box-shadow 0.3s linear, -webkit-transform 0.3s linear;
+    transition: box-shadow 0.3s linear, transform 0.3s linear;
+    transition: box-shadow 0.3s linear, transform 0.3s linear, -webkit-box-shadow 0.3s linear, -webkit-transform 0.3s linear;
+    -webkit-transition: box-shadow 0.3s linear, transform 0.3s linear;
+    -moz-transition: box-shadow 0.3s linear, transform 0.3s linear;
+    -ms-transition: box-shadow 0.3s linear, transform 0.3s linear;
+    -o-transition: box-shadow 0.3s linear, transform 0.3s linear;
+}
+
+.event__card:hover {
+    -webkit-box-shadow: 2px 4px 0 #959091;
+    box-shadow: 2px 4px 0 #959091;
+    transform: translateY(-6px);
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+}
+
+.event__card--title {
+    height: 8rem;
+    width: 100%;
+    background-color: #fb5a61;
+    line-height: 8rem;
+    margin-bottom: 2rem;
+}
+
+.event__card--title h3 {
+    font-weight: 400;
+    font-size: 3rem;
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: "Montez", cursive;
+}
+
+.event__card--suptitle {
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.event__card--suptitle h4 {
+    font-family: "Athiti", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(46, 46, 46, 0.9);
+}
+
+.event__card--img {
+    margin-bottom: 2rem;
+}
+
+.event__card--figure {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.event__card--figure h5 {
+    position: absolute;
+    z-index: 2;
+    font-family: "Athiti", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.event__card--text {
+    margin-bottom: 4rem;
+}
+
+.event__card--text p {
+    line-height: 34px;
+    font-family: "Athiti", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(46, 46, 46, 0.9);
+}
+
+.right__title--card {
+    background-color: #d2527f;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text__left {
+    text-align: left;
+}
+
+.text__right {
+    text-align: right;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+@media (max-width: 991px) {
+    .mt-6 {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mt-6 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .mt-4 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+    .mt-2 {
+        margin-top: 1rem;
+    }
+}
+
+.loveline {
+    background-color: #f5f5f5;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+.loveline__row {
+    width: 100%;
+}
+
+.loveline__title {
+    margin-bottom: 4rem;
+}
+
+.loveline__title h3 {
+    font-family: "Montez", cursive;
+    font-weight: 300;
+    font-size: 3rem;
+    color: #2e2e2e;
+    margin-bottom: 1rem;
+}
+
+.loveline__slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.love__slider--item img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 html {

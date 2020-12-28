@@ -1,0 +1,45 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.loveline {
+  background-color: #f5f5f5;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+.loveline__row {
+  width: 100%;
+}
+.loveline__title {
+  margin-bottom: 4rem;
+  h3 {
+    font-family: $montez;
+    font-weight: 300;
+    font-size: 3rem;
+    color: $text;
+    margin-bottom: 1rem;
+  }
+}
+.loveline__slider {
+  width: 100%;
+  overflow: hidden;
+}
+.love__slider--item{
+  img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  h4 {
+
+  }
+  p {
+
+  }
+}
