@@ -95,4 +95,13 @@ jQuery(document).ready(function () {
     focusOnSelect: false,
     fade: false,
   });
+  //controll slider loveline
+  $("#lovelinePrev").on("click", function(){
+    var curentItem = $(this).parent(".loveline__row").find("#loveSlider");
+    curentItem.slick("slickPrev");
+  });
+  $("#lovelineNext").on("click", function(){
+    var curentItem = $(this).parent(".loveline__row").find("#loveSlider");
+    curentItem.slick("slickNext");
+  });
 });
