@@ -1,0 +1,75 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.gelery {
+  width: 100%;
+}
+.gelery__title {
+  h3 {
+    font-family: $montez;
+    font-size: 3rem;
+    color: $text;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $text;
+    font-family: $athiti;
+    width: 80%;
+    margin: 0 auto 1rem;
+  }
+}
+.gelery__row {
+  width: 100%;
+}
+.gelery__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.gallery__item {
+  display: block;
+  width: 32%;
+  text-decoration: none;
+  margin: 1% 0;
+  position: relative;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($white, 0.3);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+    -webkit-transition: visibility 0.3s linear, opacity 0.3s linear;
+    -moz-transition: visibility 0.3s linear, opacity 0.3s linear;
+    -ms-transition: visibility 0.3s linear, opacity 0.3s linear;
+    -o-transition: visibility 0.3s linear, opacity 0.3s linear;
+  }
+  &:hover{
+    &::after{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

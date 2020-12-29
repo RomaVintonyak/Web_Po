@@ -45,6 +45,8 @@ a {
 /*vendor*/
 /*slick*/
 @import "vendor/slick.scss";
+/*lightbox*/
+@import "vendor/lightbox.scss";
 /*block*/
 /*container*/
 @import "block/container.scss"; 
@@ -62,3 +64,5 @@ a {
 @import "block/loveline.scss";
 /*say*/
 @import "block/say.scss";
+/*gallery*/
+@import "block/gallery.scss";
