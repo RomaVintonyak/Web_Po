@@ -4,24 +4,6 @@
 @import "./help.scss";
 /*mixins*/
 @import "./mixin.scss";
-/*vendor*/
-/*slick*/
-@import "vendor/slick.scss";
-/*block*/
-/*container*/
-@import "block/container.scss"; 
-/*nav*/
-@import "block/nav.scss";
-/*btn*/
-@import "block/btn.scss";
-/*intro*/
-@import "block/intro.scss";
-/*aboutUS*/
-@import "block/aboutUs.scss";
-/*wedding event*/
-@import "block/weddingEvent.scss";
-/*loveline*/
-@import "block/loveline.scss";
 /*main style*/
 html{
   font-size: 16px;
@@ -60,3 +42,23 @@ a {
 .alert{
   background-attachment: fixed;
 }
+/*vendor*/
+/*slick*/
+@import "vendor/slick.scss";
+/*block*/
+/*container*/
+@import "block/container.scss"; 
+/*nav*/
+@import "block/nav.scss";
+/*btn*/
+@import "block/btn.scss";
+/*intro*/
+@import "block/intro.scss";
+/*aboutUS*/
+@import "block/aboutUs.scss";
+/*wedding event*/
+@import "block/weddingEvent.scss";
+/*loveline*/
+@import "block/loveline.scss";
+/*say*/
+@import "block/say.scss";

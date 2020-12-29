@@ -1,0 +1,65 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.we__say{
+  background-color: #1c1c1c;
+  padding: 6rem 0;
+}
+.say__row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.say__coll{
+  width: 50%;
+  &--left{
+    position: relative;
+    text-align: left;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    p{
+      font-family: $athiti;
+      color: $white;
+      font-weight: 300;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background-color: rgba($white, 0.6);
+    }
+  }
+  &--right{
+    padding-left: 2rem;
+    text-align: left;
+    h2{
+      font-family: $montez;
+      color: $white;
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 0;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      span{
+        font-size: 5rem;
+        color:rgba($white, 0.6);
+      }
+    }
+    h3{
+      font-family: $athiti;
+      color: $white;
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 0;
+    }
+  }
+}
