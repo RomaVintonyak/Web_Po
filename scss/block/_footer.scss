@@ -1,0 +1,37 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+.footer{
+  width: 100%;
+  background-color: $red;
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
+}
+.footer__wraper{
+  width: 100%;
+  h3{
+    color: $white;
+    font-weight: 700;
+    font-family: $athiti;
+    font-size: 1rem;
+    line-height: 0;
+    margin-bottom: 2.5rem;
+  }
+  h2{
+    color: $white;
+    font-weight: 300;
+    font-family: $montez;
+    font-size: 5rem;
+    line-height: 0;
+    margin-bottom: 3.5rem;
+  }
+}
+.footer__copiright{
+  color: $white;
+  font-family: $athiti;
+  font-weight: 300;
+  font-size: 0.8rem;
+}

@@ -38,6 +38,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Montez&display=swap");
+
 .img {
     display: block;
     width: 100%;
@@ -1707,4 +1711,102 @@ body.lb-disable-scrolling {
 .gallery__item:hover::after {
     opacity: 0;
     visibility: hidden;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text__left {
+    text-align: left;
+}
+
+.text__right {
+    text-align: right;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+@media (max-width: 991px) {
+    .mt-6 {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mt-6 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .mt-4 {
+        margin-top: 2rem;
+    }
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+    .mt-2 {
+        margin-top: 1rem;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: #fb5a61;
+    padding-top: 4rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer__wraper {
+    width: 100%;
+}
+
+.footer__wraper h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Athiti", sans-serif;
+    font-size: 1rem;
+    line-height: 0;
+    margin-bottom: 2.5rem;
+}
+
+.footer__wraper h2 {
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Montez", cursive;
+    font-size: 5rem;
+    line-height: 0;
+    margin-bottom: 3.5rem;
+}
+
+.footer__copiright {
+    color: #ffffff;
+    font-family: "Athiti", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
 }
