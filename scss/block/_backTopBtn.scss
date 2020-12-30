@@ -1,0 +1,42 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+.scroll_top {
+  width: 50px;
+  height: 50px;
+  background-color: $silver-l;
+  position: fixed;
+  bottom: -50px;
+  right: 2%;
+  z-index: 1000;
+  text-align: center;
+  line-height: 66px;
+  transition: bottom 0.5s linear, background-color 0.2s linear;
+  -webkit-transition: bottom 0.5s linear, background-color 0.2s linear;
+  -moz-transition: bottom 0.5s linear, background-color 0.2s linear;
+  -ms-transition: bottom 0.5s linear, background-color 0.2s linear;
+  -o-transition: bottom 0.5s linear, background-color 0.2s linear;
+  span {
+    i {
+      color: $white;
+      font-size: 2rem;
+      transition: color 0.2s linear;
+      -webkit-transition: color 0.2s linear;
+      -moz-transition: color 0.2s linear;
+      -ms-transition: color 0.2s linear;
+      -o-transition: color 0.2s linear;
+    }
+  }
+  &:hover {
+    background-color: $text;
+    cursor: pointer;
+    span {
+      i {
+        color: $red;
+      }
+    }
+  }
+}

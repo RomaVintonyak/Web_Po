@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
     fade: true,
   });
   /*intro timer*/
-  var deadLine = new Date("2020-12-31").getTime();
+  var deadLine = new Date("2021-01-01").getTime();
   var timer = setInterval(function () {
     var now = new Date().getTime();
     var distance = deadLine - now;
@@ -103,5 +103,28 @@ jQuery(document).ready(function () {
   $("#lovelineNext").on("click", function(){
     var curentItem = $(this).parent(".loveline__row").find("#loveSlider");
     curentItem.slick("slickNext");
+  });
+  /* scroll top btn */
+  var scrollTopBtn = $("#topBtn");
+  var introH = $("#intro").height();
+  scrollTopBtn.fadeOut("fast");
+  $(window).on("scroll", function(){
+    if($(this).scrollTop() > introH){
+      scrollTopBtn.fadeIn(700);
+      scrollTopBtn.css({
+        "bottom": "0"
+      });
+    }else{
+      scrollTopBtn.fadeOut(1500);
+      scrollTopBtn.css({
+        "bottom": "-50px"
+      });
+    }
+  });
+  scrollTopBtn.on("click", function(event){
+    event.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, 1000);
   });
 });
