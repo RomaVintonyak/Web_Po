@@ -1,5 +1,18 @@
 jQuery(document).ready(function () {
   "use script";
+  /*waves fect initialized*/
+  Waves.attach(".waves-effect");
+  Waves.init();
+  /* smoth scroll to cat */
+  var navLinks = $(".nav__link");
+  navLinks.on("click", function(event){
+    event.preventDefault();
+    var scrolId = $(this).attr("href");
+    var scrolPos = $(scrolId).offset().top;
+    $("html, body").animate({
+      scrollTop: scrolPos - 100
+    }, 1000);
+  });
   /*initialized slick slider to intro block*/
   var introSlider = $("#introSlider");
   introSlider.slick({

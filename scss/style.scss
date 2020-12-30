@@ -1,9 +1,7 @@
 /*variables*/
 @import "./var.scss";
-/*helpers class*/
-@import "./help.scss";
-/*mixins*/
-@import "./mixin.scss";
+/*normalize css https://necolas.github.io/normalize.css/ */
+@import "vendor/normalize.scss";
 /*main style*/
 html{
   font-size: 16px;
@@ -42,11 +40,17 @@ a {
 .alert{
   background-attachment: fixed;
 }
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
 /*vendor*/
 /*slick*/
 @import "vendor/slick.scss";
 /*lightbox*/
 @import "vendor/lightbox.scss";
+/*waves*/
+@import "vendor/waves.scss";
 /*block*/
 /*container*/
 @import "block/container.scss"; 
