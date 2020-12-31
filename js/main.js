@@ -13,6 +13,30 @@ jQuery(document).ready(function () {
       scrollTop: scrolPos - 100
     }, 1000);
   });
+  /* load line */
+    $(window).on("scroll resize", function() {
+      var dHeight = $(document).height();
+      var scrolTop = $(window).scrollTop();
+      var wHeight = $(window).height();
+      var prog = scrolTop / (dHeight - wHeight);
+      console.log(prog);
+      $("#loadLine").css({
+        width: ((100 * prog) | 0) + "%"
+      });
+    });
+  /*var wHeight = $(window).height();
+  var dHeight = $(document).height();
+  $(window).on("scroll resize", loadLineScroll);
+  function loadLineScroll(){
+    var scrollPosition = $(window).scrollTop();
+    var scrollPercent = (scrollPosition / (dHeight - wHeight)) * 100;
+    var percentSt = Math.ceil(scrollPercent);
+    $("#loadLine").css({
+      "width" : percentSt + "%"
+    });
+    console.log(scrollPosition);
+    console.log(percentSt);
+  }*/
   /*initialized slick slider to intro block*/
   var introSlider = $("#introSlider");
   introSlider.slick({

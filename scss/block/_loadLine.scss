@@ -1,0 +1,16 @@
+/*var*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.load__line{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+  width: 0;
+  height: 1px;
+  background-color: $red;
+}
