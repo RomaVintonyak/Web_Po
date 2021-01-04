@@ -3,10 +3,27 @@ jQuery(document).ready(function () {
   /*waves fect initialized*/
   Waves.attach(".waves-effect");
   Waves.init();
+  /*wow init*/
+  wow = new WOW({
+    boxClass:     'wow', 
+    animateClass: 'animated',
+    offset:       0,
+    mobile:       false,
+    live:         true
+  });
+  wow.init();
   /* burger button */
-  $(".btn__burger").on("click", function(event){
-    event.preventDefault();
-    $(this).find("span").toggleClass("open__button");
+  $(window).on("scroll, resize", function(){
+    var wWidth = $(window).width();
+    console.log(wWidth);
+    if(wWidth < 768){
+    $(".btn__burger").on("click", function(event){
+      event.preventDefault();
+      $(this).find("span").toggleClass("open__button");
+    });
+    }else{
+    $(".btn__burger").find("span").removeClass("open__button");
+    }
   });
   /* smoth scroll to cat */
   var navLinks = $(".nav__link");
@@ -68,7 +85,6 @@ jQuery(document).ready(function () {
   }, 1000);
   /*fixed header*/
   var headerBar = $("#header");
-  var headerHeight = headerBar.innerHeight();
   $(window).on("scroll", function () {
     if ($(this).scrollTop() >= 1) {
       headerBar.addClass("fixed__header");
@@ -102,7 +118,7 @@ jQuery(document).ready(function () {
   }
   //remove css style
   cardItem.mouseleave(stopRotate);
-  function stopRotate(event) {
+  function stopRotate() {
     $(this).css({
       transform: "rotate(0deg)",
     });

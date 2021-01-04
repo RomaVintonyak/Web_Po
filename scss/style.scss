@@ -44,13 +44,6 @@ a {
 @import "./help.scss";
 /*mixins*/
 @import "./mixin.scss";
-/*vendor*/
-/*slick*/
-@import "vendor/slick.scss";
-/*lightbox*/
-@import "vendor/lightbox.scss";
-/*waves*/
-@import "vendor/waves.scss";
 /*block*/
 /*container*/
 @import "block/container.scss"; 
@@ -76,3 +69,13 @@ a {
 @import "block/backTopBtn.scss";
 /*load line*/
 @import "block/loadLine.scss";
+/*=================================*/
+/*vendor*/
+/*slick*/
+@import "vendor/slick.scss";
+/*lightbox*/
+@import "vendor/lightbox.scss";
+/*waves*/
+@import "vendor/waves.scss";
+/*wow*/
+@import "vendor/animate.scss";
