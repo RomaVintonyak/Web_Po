@@ -15,8 +15,7 @@
   text-align: center;
   perspective: 1000px;
   img{
-    border: 1px solid $red;
-    border-radius: 5px;
+    border-radius: 2px;
     &:hover{
       cursor: grab;
     }

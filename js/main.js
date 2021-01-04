@@ -3,6 +3,11 @@ jQuery(document).ready(function () {
   /*waves fect initialized*/
   Waves.attach(".waves-effect");
   Waves.init();
+  /* burger button */
+  $(".btn__burger").on("click", function(event){
+    event.preventDefault();
+    $(this).find("span").toggleClass("open__button");
+  });
   /* smoth scroll to cat */
   var navLinks = $(".nav__link");
   navLinks.on("click", function(event){
@@ -14,29 +19,17 @@ jQuery(document).ready(function () {
     }, 1000);
   });
   /* load line */
-    $(window).on("scroll resize", function() {
-      var dHeight = $(document).height();
-      var scrolTop = $(window).scrollTop();
-      var wHeight = $(window).height();
-      var prog = scrolTop / (dHeight - wHeight);
-      console.log(prog);
-      $("#loadLine").css({
-        width: ((100 * prog) | 0) + "%"
-      });
-    });
-  /*var wHeight = $(window).height();
-  var dHeight = $(document).height();
   $(window).on("scroll resize", loadLineScroll);
   function loadLineScroll(){
+    var wHeight = $(window).height();
+    var dHeight = $(document).height();
     var scrollPosition = $(window).scrollTop();
-    var scrollPercent = (scrollPosition / (dHeight - wHeight)) * 100;
+    var scrollPercent = 100 * (scrollPosition / (dHeight - wHeight)) ;
     var percentSt = Math.ceil(scrollPercent);
     $("#loadLine").css({
       "width" : percentSt + "%"
     });
-    console.log(scrollPosition);
-    console.log(percentSt);
-  }*/
+  }
   /*initialized slick slider to intro block*/
   var introSlider = $("#introSlider");
   introSlider.slick({
@@ -52,20 +45,16 @@ jQuery(document).ready(function () {
     fade: true,
   });
   /*intro timer*/
-  var deadLine = new Date("2021-01-01").getTime();
+  var deadLine = new Date("2021-02-20").getTime();
   var timer = setInterval(function () {
     var now = new Date().getTime();
     var distance = deadLine - now;
     // Time calculations for days, hours, minutes and seconds
-    //var month = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.5));
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     // Display the result in the element with id="demo"
-    //document.getElementById("timerMonth").innerHTML = month;
     document.getElementById("timerDays").innerHTML = days;
     document.getElementById("timerHours").innerHTML = hours;
     document.getElementById("timerMinutes").innerHTML = minutes;
@@ -73,7 +62,7 @@ jQuery(document).ready(function () {
     // If the deadLine is finished, write some text
     if (distance < 0) {
       clearInterval(timer);
-      var mesag = "just married";
+      var mesag = "Подія відбулася. Дякуємо що завітали.";
       alert(mesag);
     }
   }, 1000);

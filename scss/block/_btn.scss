@@ -5,32 +5,39 @@
 /*mixins*/
 @import "./mixin.scss";
 
-.btn{
-  background-color: transparent;
-  border: none;
-  width: 150px;
-  height: 50px;
-  text-transform: uppercase;
-  background-color: $red;
-  color: $white;
-  font-size: 1rem;
-  letter-spacing: 6px;
-  font-weight: 600;
-  font-family: $athiti;
-  transition: color 0.1s linear, border 0.1s linear, background-color 0.1s linear, box-shadow 0.1s linear;
-  &:focus{
-    outline: none;
+.navbar__bnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn__burger {
+  border: 3px solid #333;
+  padding: 6px;
+  display: inline-block;
+  cursor: pointer;
+  span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
   }
-  &:hover{
-    cursor: pointer;
-    color: $red;
-    background-color: $white;
-    border: 2px solid $red;
-    transition: color 0.1s linear, border 0.1s linear, background-color 0.1s linear, box-shadow 0.1s linear;
+}
+.open__button {
+  &:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
   }
-  &:active{
-    color: $white;
-    background-color: $red;
-    box-shadow: 3px 3px 0px $red;
+}
+.open__button {
+  &:nth-child(2) {
+    opacity: 0;
+  }
+}
+.open__button {
+  &:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 }
