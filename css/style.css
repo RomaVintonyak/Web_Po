@@ -932,6 +932,12 @@ a:focus {
     }
 }
 
+@media (max-width: 991px) {
+    #introTitle {
+        top: calc(50% - 230px);
+    }
+}
+
 @media (max-width: 768px) {
     #introTitle {
         top: calc(50% - 79px);
@@ -1246,6 +1252,20 @@ a:focus {
     padding-bottom: 6rem;
 }
 
+@media (max-width: 991px) {
+    .wedding__event {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wedding__event {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
 .event__row {
     width: 100%;
     text-align: center;
@@ -1256,6 +1276,18 @@ a:focus {
     font-size: 5rem;
     color: #ffffff;
     font-weight: normal;
+}
+
+@media (max-width: 991px) {
+    .event__row--title h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .event__row--title h2 {
+        font-size: 3rem;
+    }
 }
 
 .event__row--card {
@@ -1269,6 +1301,26 @@ a:focus {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+    .event__row--card {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .event__row--card {
+        margin-top: 1rem;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 .event__card {
@@ -1356,6 +1408,23 @@ a:focus {
     font-size: 1rem;
     font-weight: 300;
     color: rgba(46, 46, 46, 0.9);
+}
+
+@media (max-width: 768px) {
+    .event__card {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .event__card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .event__card {
+        width: 100%;
+    }
 }
 
 .right__title--card {

@@ -140,6 +140,22 @@ jQuery(document).ready(function () {
     touchMove: false,
     focusOnSelect: false,
     fade: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          fade: true,
+          swipe: true,
+          touchMove: true
+        }
+      }]
   });
   //controll slider loveline
   $("#lovelinePrev").on("click", function () {
