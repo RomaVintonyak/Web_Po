@@ -5,46 +5,48 @@ jQuery(document).ready(function () {
   Waves.init();
   /*wow init*/
   wow = new WOW({
-    boxClass:     'wow', 
-    animateClass: 'animated',
-    offset:       0,
-    mobile:       false,
-    live:         true
+    boxClass: "wow",
+    animateClass: "animated",
+    offset: 0,
+    mobile: false,
+    live: true,
   });
   wow.init();
   /* burger button */
-  $(window).on("scroll, resize", function(){
+  $(".btn__burger").on("click", function (event) {
+    event.preventDefault();
     var wWidth = $(window).width();
-    console.log(wWidth);
-    if(wWidth < 768){
-    $(".btn__burger").on("click", function(event){
-      event.preventDefault();
+    if (wWidth <= 768) {
       $(this).find("span").toggleClass("open__button");
-    });
-    }else{
-    $(".btn__burger").find("span").removeClass("open__button");
+      $(".navbar__menu").toggleClass("mobile__menu");
+    } else {
+      $(".btn__burger").find("span").removeClass("open__button");
+      $(".navbar__menu").removeClass("mobile__menu");
     }
   });
   /* smoth scroll to cat */
   var navLinks = $(".nav__link");
-  navLinks.on("click", function(event){
+  navLinks.on("click", function (event) {
     event.preventDefault();
     var scrolId = $(this).attr("href");
     var scrolPos = $(scrolId).offset().top;
-    $("html, body").animate({
-      scrollTop: scrolPos - 100
-    }, 1000);
+    $("html, body").animate(
+      {
+        scrollTop: scrolPos - 100,
+      },
+      1000
+    );
   });
   /* load line */
   $(window).on("scroll resize", loadLineScroll);
-  function loadLineScroll(){
+  function loadLineScroll() {
     var wHeight = $(window).height();
     var dHeight = $(document).height();
     var scrollPosition = $(window).scrollTop();
-    var scrollPercent = 100 * (scrollPosition / (dHeight - wHeight)) ;
+    var scrollPercent = 100 * (scrollPosition / (dHeight - wHeight));
     var percentSt = Math.ceil(scrollPercent);
     $("#loadLine").css({
-      "width" : percentSt + "%"
+      width: percentSt + "%",
     });
   }
   /*initialized slick slider to intro block*/
@@ -68,7 +70,9 @@ jQuery(document).ready(function () {
     var distance = deadLine - now;
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     // Display the result in the element with id="demo"
@@ -138,11 +142,11 @@ jQuery(document).ready(function () {
     fade: false,
   });
   //controll slider loveline
-  $("#lovelinePrev").on("click", function(){
+  $("#lovelinePrev").on("click", function () {
     var curentItem = $(this).parent(".loveline__row").find("#loveSlider");
     curentItem.slick("slickPrev");
   });
-  $("#lovelineNext").on("click", function(){
+  $("#lovelineNext").on("click", function () {
     var curentItem = $(this).parent(".loveline__row").find("#loveSlider");
     curentItem.slick("slickNext");
   });
@@ -150,23 +154,26 @@ jQuery(document).ready(function () {
   var scrollTopBtn = $("#topBtn");
   var introH = $("#intro").height();
   scrollTopBtn.fadeOut("fast");
-  $(window).on("scroll", function(){
-    if($(this).scrollTop() > introH){
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > introH) {
       scrollTopBtn.fadeIn(700);
       scrollTopBtn.css({
-        "bottom": "0"
+        bottom: "0",
       });
-    }else{
+    } else {
       scrollTopBtn.fadeOut(1500);
       scrollTopBtn.css({
-        "bottom": "-50px"
+        bottom: "-50px",
       });
     }
   });
-  scrollTopBtn.on("click", function(event){
+  scrollTopBtn.on("click", function (event) {
     event.preventDefault();
-    $("html, body").animate({
-      scrollTop: 0
-    }, 1000);
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
   });
 });

@@ -9,11 +9,17 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  @include mobile{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .about__img {
   flex-basis: 30%;
   text-align: center;
   perspective: 1000px;
+  transform-style: preserve-3d;
   img{
     border-radius: 2px;
     &:hover{
@@ -35,6 +41,14 @@
     color: $text;
     line-height: 1.5;  
   }
+  @include mobile{
+    flex-basis: 80%;
+    order: 2;
+    margin-bottom: 2rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
 }
 .about__title{
   flex-basis: 40%;
@@ -44,7 +58,11 @@
     font-family: $montez;
     color: $text;
     line-height: 1;
-    margin-top: 10rem; 
+    margin-top: 10rem;
+    @include mobile{
+      font-size: 4rem;
+      margin-top: 0;
+    }
   }
   p{
     font-size: 1rem;
@@ -60,6 +78,11 @@
     text-transform: uppercase;
     font-family: $athiti;
     line-height: 1;
+  }
+  @include mobile{
+    flex-basis: 80%;
+    order: 1;
+    margin-bottom: 2rem;
   }
 }
 .rotateHover{
