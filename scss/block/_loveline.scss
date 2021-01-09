@@ -60,17 +60,18 @@
   position: absolute!important;
   z-index: 2;
   padding: 0.3rem;
+  transform: translateY(-100%);
   i{
     font-size: 2rem;
     color: rgba($black, 0.5);
   }
   &--prev{
-    left: 0;
-    top: 45%;
+    left: -1%;
+    top: 50%;
   }
   &--next{
-    top: 45%;
-    right: 0%;
+    top: 50%;
+    right: -1%;
   }
   &:hover{
     cursor: pointer;

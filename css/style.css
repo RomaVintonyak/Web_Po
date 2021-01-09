@@ -917,6 +917,13 @@ a:focus {
     }
 }
 
+@media (max-width: 576px) {
+    #introTitle h2 {
+        margin-bottom: 0.8rem;
+        font-size: 1.8rem;
+    }
+}
+
 #introTitle p {
     font-size: 1.8rem;
     font-family: "Athiti", sans-serif;
@@ -932,6 +939,12 @@ a:focus {
     }
 }
 
+@media (max-width: 576px) {
+    #introTitle p {
+        line-height: 1;
+    }
+}
+
 @media (max-width: 991px) {
     #introTitle {
         top: calc(50% - 230px);
@@ -941,6 +954,12 @@ a:focus {
 @media (max-width: 768px) {
     #introTitle {
         top: calc(50% - 79px);
+    }
+}
+
+@media (max-width: 576px) {
+    #introTitle {
+        top: calc(50% - 110px);
     }
 }
 
@@ -971,6 +990,12 @@ a:focus {
     }
 }
 
+@media (max-width: 576px) {
+    #introTimer {
+        height: 80px;
+    }
+}
+
 .timer__block {
     width: 20%;
     text-align: center;
@@ -986,6 +1011,12 @@ a:focus {
 .timer__block p:first-child {
     font-size: 3.5rem;
     font-weight: 300;
+}
+
+@media (max-width: 576px) {
+    .timer__block p:first-child {
+        font-size: 2rem;
+    }
 }
 
 .img {
@@ -1126,6 +1157,14 @@ a:focus {
     }
 }
 
+@media (max-width: 576px) {
+    .about__img {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
 .about__title {
     -ms-flex-preferred-size: 40%;
     flex-basis: 40%;
@@ -1147,6 +1186,12 @@ a:focus {
     }
 }
 
+@media (max-width: 576px) {
+    .about__title h2 {
+        font-size: 3rem;
+    }
+}
+
 .about__title p {
     font-size: 1rem;
     text-transform: uppercase;
@@ -1154,6 +1199,12 @@ a:focus {
     color: #2e2e2e;
     line-height: 2rem;
     margin-top: 1rem;
+}
+
+@media (max-width: 576px) {
+    .about__title p {
+        line-height: 1.5rem;
+    }
 }
 
 .about__title h4 {
@@ -1172,6 +1223,14 @@ a:focus {
         -ms-flex-order: 1;
         order: 1;
         margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about__title {
+        margin-bottom: 1rem;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     }
 }
 
@@ -1290,6 +1349,12 @@ a:focus {
     }
 }
 
+@media (max-width: 576px) {
+    .event__row--title h2 {
+        font-size: 1.8rem;
+    }
+}
+
 .event__row--card {
     margin-top: 3rem;
     display: -webkit-box;
@@ -1358,8 +1423,21 @@ a:focus {
     font-weight: 400;
     font-size: 3rem;
     color: #ffffff;
-    font-size: 3rem;
     font-family: "Montez", cursive;
+}
+
+@media (max-width: 576px) {
+    .event__card--title h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .event__card--title {
+        margin-bottom: 1rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
 }
 
 .event__card--suptitle {
@@ -1375,8 +1453,20 @@ a:focus {
     color: rgba(46, 46, 46, 0.9);
 }
 
+@media (max-width: 576px) {
+    .event__card--suptitle {
+        margin-bottom: 1rem;
+    }
+}
+
 .event__card--img {
     margin-bottom: 2rem;
+}
+
+@media (max-width: 576px) {
+    .event__card--img {
+        margin-bottom: 1rem;
+    }
 }
 
 .event__card--figure {
@@ -1398,6 +1488,24 @@ a:focus {
     transform: translateX(-50%) translateY(-50%);
 }
 
+@media (max-width: 576px) {
+    .event__card--figure h5 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .event__card--figure {
+        margin-bottom: 1rem;
+    }
+
+    .event__card--figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
 .event__card--text {
     margin-bottom: 4rem;
 }
@@ -1408,6 +1516,18 @@ a:focus {
     font-size: 1rem;
     font-weight: 300;
     color: rgba(46, 46, 46, 0.9);
+}
+
+@media (max-width: 350px) {
+    .event__card--text p {
+        padding: 0 0.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .event__card--text {
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1557,6 +1677,9 @@ a:focus {
     position: absolute !important;
     z-index: 2;
     padding: 0.3rem;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .love__buton i {
@@ -1565,13 +1688,13 @@ a:focus {
 }
 
 .love__buton--prev {
-    left: 0;
-    top: 45%;
+    left: -1%;
+    top: 50%;
 }
 
 .love__buton--next {
-    top: 45%;
-    right: 0%;
+    top: 50%;
+    right: -1%;
 }
 
 .love__buton:hover {

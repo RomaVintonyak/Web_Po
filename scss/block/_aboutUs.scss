@@ -49,6 +49,10 @@
       margin-bottom: 0;
     }
   }
+  @include mobile-sm{
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+  }
 }
 .about__title{
   flex-basis: 40%;
@@ -63,6 +67,9 @@
       font-size: 4rem;
       margin-top: 0;
     }
+    @include mobile-sm{
+      font-size: 3rem;
+    }
   }
   p{
     font-size: 1rem;
@@ -71,6 +78,9 @@
     color: $text;
     line-height: 2rem;
     margin-top: 1rem;
+    @include mobile-sm{
+      line-height: 1.5rem;
+    }
   }
   h4{
     color: $red;
@@ -83,6 +93,10 @@
     flex-basis: 80%;
     order: 1;
     margin-bottom: 2rem;
+  }
+  @include mobile-sm{
+    margin-bottom: 1rem;
+    flex-basis: 100%;
   }
 }
 .rotateHover{

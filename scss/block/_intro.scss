@@ -64,6 +64,10 @@
     @include mobile {
       font-size: 2rem;
     }
+    @include mobile-sm{
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+    }
   }
   p {
     font-size: 1.8rem;
@@ -75,12 +79,18 @@
     @include mobile {
       font-size: 1rem;
     }
+    @include mobile-sm{
+      line-height: 1;
+    }
   }
   @include tablet {
     top: calc(50% - 230px);
   }
   @include mobile {
     top: calc(50% - 79px);
+  }
+  @include mobile-sm {
+    top: calc(50% - 110px);
   }
 }
 #introTimer {
@@ -99,6 +109,9 @@
     left: 0;
     height: 100px;
   }
+  @include mobile-sm{
+    height: 80px;
+  }
 }
 .timer__block {
   width: 20%;
@@ -112,5 +125,10 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: $white;
+    @include mobile-sm{
+      &:first-child {
+        font-size: 2rem;
+      }
+    }
   }
 }
