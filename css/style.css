@@ -1678,7 +1678,7 @@ a:focus {
 
 @media (max-width: 991px) {
     .loveline__title h3 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 }
 
@@ -2093,21 +2093,54 @@ a:focus {
     font-family: "Cormorant Garamond", serif;
     font-size: 3rem;
     color: #2e2e2e;
-    font-weight: 300;
-    margin-bottom: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 991px) {
+    .gelery__title h3 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gelery__title h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .gelery__title h3 {
+        font-size: 1.8rem;
+    }
 }
 
 .gelery__title img {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .gelery__title p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: #2e2e2e;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000000;
     font-family: "Cormorant Garamond", serif;
     width: 80%;
     margin: 0 auto 1rem;
+}
+
+@media (max-width: 768px) {
+    .gelery__title p {
+        font-size: 1.4rem;
+        width: 85%;
+    }
+}
+
+@media (max-width: 576px) {
+    .gelery__title p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
 }
 
 .gelery__row {
@@ -2127,6 +2160,14 @@ a:focus {
     align-items: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    .gelery__container {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 .gallery__item {
@@ -2164,6 +2205,18 @@ a:focus {
 .gallery__item:hover::after {
     opacity: 0;
     visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .gallery__item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery__item {
+        width: 96%;
+    }
 }
 
 .img {

@@ -13,19 +13,37 @@
     font-family: $cormorant;
     font-size: 3rem;
     color: $text;
-    font-weight: 300;
-    margin-bottom: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 1rem;
+    @include tablet {
+      font-size: 2.8rem;
+    }
+    @include mobile {
+      font-size: 2.5rem;
+    }
+    @include mobile-sm {
+      font-size: 1.8rem;
+    }
   }
   img {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: $text;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $black;
     font-family: $cormorant;
     width: 80%;
     margin: 0 auto 1rem;
+    @include mobile {
+      font-size: 1.4rem;
+      width: 85%;
+    }
+    @include mobile-sm {
+      font-size: 1.1rem;
+      width: 90%;
+    }
   }
 }
 .gelery__row {
@@ -37,6 +55,9 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  @include mobile-sm {
+    justify-content: center;
+  }
 }
 .gallery__item {
   display: block;
@@ -66,10 +87,16 @@
     -ms-transition: visibility 0.3s linear, opacity 0.3s linear;
     -o-transition: visibility 0.3s linear, opacity 0.3s linear;
   }
-  &:hover{
-    &::after{
+  &:hover {
+    &::after {
       opacity: 0;
       visibility: hidden;
     }
+  }
+  @include mobile {
+    width: 48%;
+  }
+  @include mobile-sm {
+    width: 96%;
   }
 }
