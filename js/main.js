@@ -195,4 +195,15 @@ jQuery(document).ready(function () {
       1000
     );
   });
+  /*lazy line pianter*/
+  let ring = document.querySelector('#weddingrings');
+  let ringAnimation = new LazyLinePainter(ring, {
+    "ease": "easeInOutCirc",
+    "strokeWidth": 2.5,
+    "strokeOpacity": 1,
+    "strokeColor": "#fb5a61",
+    "strokeCap": "square",
+    "repeat": 1000
+  });
+  ringAnimation.paint();
 });
