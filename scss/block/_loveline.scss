@@ -7,8 +7,16 @@
 
 .loveline {
   background-color: #f5f5f5;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  @include tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  @include mobile {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 .loveline__row {
   width: 100%;
@@ -18,9 +26,28 @@
   margin-bottom: 4rem;
   h3 {
     font-family: $cormorant;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 3rem;
+    font-style: italic;
     color: $text;
+    margin-bottom: 1rem;
+    @include tablet {
+      font-size: 3rem;
+    }
+    @include mobile {
+      font-size: 2.5rem;
+    }
+    @include mobile-sm {
+      font-size: 1.8rem;
+    }
+  }
+  @include tablet {
+    margin-bottom: 3rem;
+  }
+  @include mobile {
+    margin-bottom: 2rem;
+  }
+  @include mobile-sm {
     margin-bottom: 1rem;
   }
 }
@@ -28,52 +55,55 @@
   width: 100%;
   overflow: hidden;
 }
-.love__slider--item{
+.love__slider--item {
   text-align: center;
   img {
     width: 300px;
     height: 300px;
-    margin-bottom: 2rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    margin-bottom: 1rem;
+    @include mobile-sm {
+      width: 250px;
+      height: 250px;
+    }
   }
   h4 {
     text-transform: uppercase;
-    margin-bottom: 2rem;
-    color: $text;
-    font-weight: 700;
+    margin-bottom: 1rem;
+    color: $black;
     font-family: $cormorant;
     font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
   }
   p {
-    padding: 0 2rem;
-    color: rgba($black, 0.9);
+    padding: 0 1rem;
+    color: $black;
     font-family: $cormorant;
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 }
-.love__buton{
-  position: absolute!important;
+.love__buton {
+  position: absolute !important;
   z-index: 2;
   padding: 0.3rem;
   transform: translateY(-100%);
-  i{
+  i {
     font-size: 2rem;
     color: rgba($black, 0.5);
   }
-  &--prev{
+  &--prev {
     left: -1%;
     top: 50%;
   }
-  &--next{
+  &--next {
     top: 50%;
     right: -1%;
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
+  }
+  @include mobile{
+    display: none!important;
   }
 }

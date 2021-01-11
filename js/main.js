@@ -155,7 +155,8 @@ jQuery(document).ready(function () {
           slidesToShow: 1,
           fade: true,
           swipe: true,
-          touchMove: true
+          touchMove: true,
+          autoplaySpeed: 1000,
         }
       }]
   });
