@@ -31,7 +31,9 @@
   z-index: 1500;
   h1 {
     font-size: 5rem;
-    font-family: $montez;
+    font-family: $cormorant;
+    font-weight: 600;
+    font-style: italic;
     color: $white;
     line-height: 1;
     span {
@@ -53,9 +55,10 @@
   }
   h2 {
     font-size: 5rem;
-    font-family: $athiti;
+    font-family: $cormorant;
     color: $white;
     font-weight: 700;
+    font-style: italic;
     line-height: 1;
     margin-bottom: 2rem;
     @include tablet {
@@ -71,7 +74,7 @@
   }
   p {
     font-size: 1.8rem;
-    font-family: $athiti;
+    font-family: $cormorant;
     font-weight: 700;
     color: $white;
     line-height: 1.65;
@@ -121,7 +124,7 @@
       font-size: 3.5rem;
       font-weight: 300;
     }
-    font-family: $athiti;
+    font-family: $cormorant;
     font-size: 1.2rem;
     font-weight: 700;
     color: $white;

@@ -24,7 +24,7 @@
   text-align: center;
   &--title {
     h2 {
-      font-family: $montez;
+      font-family: $cormorant;
       font-size: 5rem;
       color: $white;
       font-weight: normal;
@@ -81,7 +81,7 @@
       font-weight: 400;
       font-size: 3rem;
       color: $white;
-      font-family: $montez;
+      font-family: $cormorant;
       @include mobile-sm{
         font-size: 2rem;
       }
@@ -97,7 +97,7 @@
     padding: 0 1rem;
     margin-bottom: 2rem;
     h4 {
-      font-family: $athiti;
+      font-family: $cormorant;
       font-size: 1rem;
       font-weight: 300;
       color: rgba($text, 0.9);
@@ -119,7 +119,7 @@
     h5 {
       position: absolute;
       z-index: 2;
-      font-family: $athiti;
+      font-family: $cormorant;
       font-weight: 700;
       font-size: 1.5rem;
       top: 50%;
@@ -142,7 +142,7 @@
     margin-bottom: 4rem;
     p {
       line-height: 34px;
-      font-family: $athiti;
+      font-family: $cormorant;
       font-size: 1rem;
       font-weight: 300;
       color: rgba($text, 0.9);
