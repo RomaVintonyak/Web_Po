@@ -1850,7 +1850,19 @@ a:focus {
 
 .we__say {
     background-color: #1c1c1c;
-    padding: 6rem 0;
+    padding: 4rem 0;
+}
+
+@media (max-width: 991px) {
+    .we__say {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .we__say {
+        padding: 2rem 0;
+    }
 }
 
 .say__row {
@@ -1863,6 +1875,16 @@ a:focus {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+}
+
+@media (max-width: 576px) {
+    .say__row {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 .say__coll {
@@ -1879,9 +1901,15 @@ a:focus {
 .say__coll--left p {
     font-family: "Cormorant Garamond", serif;
     color: #ffffff;
-    font-weight: 300;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 400px) {
+    .say__coll--left p {
+        font-size: 1.3rem;
+    }
 }
 
 .say__coll--left::after {
@@ -1894,6 +1922,19 @@ a:focus {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+@media (max-width: 576px) {
+    .say__coll--left::after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .say__coll--left {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .say__coll--right {
     padding-left: 2rem;
     text-align: left;
@@ -1903,7 +1944,8 @@ a:focus {
     font-family: "Cormorant Garamond", serif;
     color: #ffffff;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 700;
+    font-style: italic;
     line-height: 0;
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -1914,12 +1956,71 @@ a:focus {
     color: rgba(255, 255, 255, 0.6);
 }
 
+@media (max-width: 768px) {
+    .say__coll--right h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+    }
+}
+
+@media (max-width: 576px) {
+    .say__coll--right h2 {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+        float: left;
+    }
+
+    .say__coll--right h2 span {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .say__coll--right h2 {
+        font-size: 2rem;
+    }
+
+    .say__coll--right h2 span {
+        font-size: 4rem;
+    }
+}
+
 .say__coll--right h3 {
     font-family: "Cormorant Garamond", serif;
     color: #ffffff;
     font-weight: 700;
+    font-style: italic;
     font-size: 3rem;
     line-height: 0;
+}
+
+@media (max-width: 576px) {
+    .say__coll--right h3 {
+        font-size: 2.5rem;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    .say__coll--right h3 {
+        font-size: 2rem;
+        line-height: 2.5;
+    }
+}
+
+@media (max-width: 576px) {
+    .say__coll--right {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .say__coll {
+        width: 100%;
+    }
 }
 
 .img {

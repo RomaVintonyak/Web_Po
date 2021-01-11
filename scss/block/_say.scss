@@ -7,12 +7,22 @@
 
 .we__say{
   background-color: #1c1c1c;
-  padding: 6rem 0;
+  padding: 4rem 0;
+  @include tablet {
+    padding: 3rem 0;
+  }
+  @include mobile {
+    padding: 2rem 0;
+  }
 }
 .say__row{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @include mobile-sm{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .say__coll{
   width: 50%;
@@ -24,9 +34,12 @@
     p{
       font-family: $cormorant;
       color: $white;
-      font-weight: 300;
-      font-size: 1rem;
+      font-weight: 400;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
+      @include mobile-xsm{
+        font-size: 1.3rem;
+      }
     }
     &::after{
       content: "";
@@ -36,6 +49,13 @@
       width: 2px;
       height: 100%;
       background-color: rgba($white, 0.6);
+      @include mobile-sm{
+        display: none;
+      }
+    }
+    @include mobile-sm{
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   &--right{
@@ -45,7 +65,8 @@
       font-family: $cormorant;
       color: $white;
       font-size: 3rem;
-      font-weight: 300;
+      font-weight: 700;
+      font-style: italic;
       line-height: 0;
       margin-top: 2rem;
       margin-bottom: 3rem;
@@ -53,13 +74,49 @@
         font-size: 5rem;
         color:rgba($white, 0.6);
       }
+      @include mobile{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+      }
+      @include mobile-sm{
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+        float: left;
+        span{
+          font-size: 4.5rem;
+        }
+      }
+      @include mobile-xsm{
+        font-size: 2rem;
+        span{
+          font-size: 4rem;
+        }
+      }
     }
     h3{
       font-family: $cormorant;
       color: $white;
       font-weight: 700;
+      font-style: italic;
       font-size: 3rem;
       line-height: 0;
+      @include mobile-sm{
+        font-size: 2.5rem;
+        line-height: 2;
+      }
+      @include mobile-xsm{
+        font-size: 2rem;
+        line-height: 2.5;
+      }
     }
+    @include mobile-sm{
+      padding-left: 0;
+    }
+  }
+  @include mobile-sm{
+    width: 100%;
   }
 }
