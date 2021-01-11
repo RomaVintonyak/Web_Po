@@ -227,6 +227,7 @@ template {
 
 html {
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -542,7 +543,7 @@ a:focus {
     font-family: "Cormorant Garamond", serif;
     color: #2e2e2e;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 0;
     margin-top: 0.6rem;
@@ -564,6 +565,12 @@ a:focus {
     -webkit-transition: width 0.3s linear;
     -o-transition: width 0.3s linear;
     transition: width 0.3s linear;
+}
+
+@media (max-width: 400px) {
+    .navbar__brand p {
+        font-size: 1rem;
+    }
 }
 
 .navbar__brand:hover p {
@@ -628,8 +635,8 @@ a:focus {
     text-transform: uppercase;
     font-family: "Cormorant Garamond", serif;
     color: #2e2e2e;
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 700;
     -webkit-transition: color 0.3s linear;
     -o-transition: color 0.3s linear;
     transition: color 0.3s linear;
@@ -868,7 +875,7 @@ a:focus {
 #introTitle h1 {
     font-size: 5rem;
     font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
+    font-weight: 700;
     font-style: italic;
     color: #ffffff;
     line-height: 1;
@@ -1007,7 +1014,7 @@ a:focus {
 
 .timer__block p {
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
 }
@@ -1018,6 +1025,10 @@ a:focus {
 }
 
 @media (max-width: 576px) {
+    .timer__block p {
+        font-size: 1.1rem;
+    }
+
     .timer__block p:first-child {
         font-size: 2rem;
     }
@@ -1134,7 +1145,8 @@ a:focus {
     color: #fb5a61;
     font-size: 2.5rem;
     font-family: "Cormorant Garamond", serif;
-    font-weight: bold;
+    font-weight: 700;
+    font-style: italic;
     line-height: 1;
 }
 
@@ -1170,17 +1182,24 @@ a:focus {
 }
 
 .about__title {
-    -ms-flex-preferred-size: 40%;
-    flex-basis: 40%;
+    -ms-flex-preferred-size: 39%;
+    flex-basis: 39%;
     text-align: center;
 }
 
 .about__title h2 {
     font-size: 6rem;
+    font-style: italic;
     font-family: "Cormorant Garamond", serif;
     color: #2e2e2e;
     line-height: 1;
     margin-top: 10rem;
+}
+
+@media (max-width: 991px) {
+    .about__title h2 {
+        margin-top: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1197,7 +1216,8 @@ a:focus {
 }
 
 .about__title p {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: "Cormorant Garamond", serif;
     color: #2e2e2e;
@@ -1213,7 +1233,7 @@ a:focus {
 
 .about__title h4 {
     color: #fb5a61;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-family: "Cormorant Garamond", serif;
     line-height: 1;
@@ -1311,14 +1331,14 @@ a:focus {
 .wedding__event {
     width: 100%;
     background-color: #1c1c1c;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 @media (max-width: 991px) {
     .wedding__event {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -1336,20 +1356,21 @@ a:focus {
 
 .event__row--title h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #ffffff;
-    font-weight: normal;
+    font-weight: 600;
+    font-style: italic;
 }
 
 @media (max-width: 991px) {
     .event__row--title h2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 
 @media (max-width: 768px) {
     .event__row--title h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -1452,8 +1473,8 @@ a:focus {
 
 .event__card--suptitle h4 {
     font-family: "Cormorant Garamond", serif;
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: rgba(46, 46, 46, 0.9);
 }
 
@@ -1517,8 +1538,8 @@ a:focus {
 .event__card--text p {
     line-height: 34px;
     font-family: "Cormorant Garamond", serif;
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: rgba(46, 46, 46, 0.9);
 }
 

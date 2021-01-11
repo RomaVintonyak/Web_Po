@@ -31,7 +31,8 @@
     color: $red;
     font-size: 2.5rem;
     font-family: $cormorant;
-    font-weight: bold;
+    font-weight: 700;
+    font-style: italic;
     line-height: 1;
   }
   p {
@@ -55,14 +56,18 @@
   }
 }
 .about__title{
-  flex-basis: 40%;
+  flex-basis: 39%;
   text-align: center;
   h2{
     font-size: 6rem;
+    font-style: italic;
     font-family: $cormorant;
     color: $text;
     line-height: 1;
     margin-top: 10rem;
+    @include tablet{
+      margin-top: 3rem;
+    }
     @include mobile{
       font-size: 4rem;
       margin-top: 0;
@@ -72,7 +77,8 @@
     }
   }
   p{
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: $cormorant;
     color: $text;
@@ -84,7 +90,7 @@
   }
   h4{
     color: $red;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-family: $cormorant;
     line-height: 1;

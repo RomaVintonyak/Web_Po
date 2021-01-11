@@ -8,11 +8,11 @@
 .wedding__event {
   width: 100%;
   background-color: #1c1c1c;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   @include tablet{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   @include mobile{
     padding-top: 2rem;
@@ -25,14 +25,15 @@
   &--title {
     h2 {
       font-family: $cormorant;
-      font-size: 5rem;
+      font-size: 4rem;
       color: $white;
-      font-weight: normal;
+      font-weight: 600;
+      font-style: italic;
       @include tablet{
-        font-size: 4rem;
+        font-size: 3rem;
       }
       @include mobile{
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
       @include mobile-sm{
         font-size: 1.8rem;
@@ -98,8 +99,8 @@
     margin-bottom: 2rem;
     h4 {
       font-family: $cormorant;
-      font-size: 1rem;
-      font-weight: 300;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: rgba($text, 0.9);
     }
     @include mobile-sm{
@@ -143,8 +144,8 @@
     p {
       line-height: 34px;
       font-family: $cormorant;
-      font-size: 1rem;
-      font-weight: 300;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: rgba($text, 0.9);
       @include mobile-xxsm{
         padding: 0 0.3rem;

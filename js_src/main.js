@@ -30,6 +30,8 @@ jQuery(document).ready(function () {
     event.preventDefault();
     var scrolId = $(this).attr("href");
     var scrolPos = $(scrolId).offset().top;
+    $(".btn__burger").find("span").removeClass("open__button");
+    $(".navbar__menu").removeClass("mobile__menu");
     $("html, body").animate(
       {
         scrollTop: scrolPos - 100,
